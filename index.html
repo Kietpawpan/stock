@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<body>
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+<script>
+
+const xValues = [2563,2564,2565,2566];
+
+new Chart("myChart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{ 
+      data: [29958.50, 31980.04, 38702.38, 38399.23], //AP
+      borderColor: "red",
+      fill: false,
+      label: 'AP',
+    }, { 
+      data: [30965.09, 33031.78, 36482.29, 27669.56], //LH
+      borderColor: "green",
+      fill: false,
+      label: 'LH',
+    }, { 
+      data: [10933.37, 15266.93, 14579.05, 14095.30],
+      borderColor: "blue",
+      fill: false,
+      label: 'ORI',
+    }, { 
+      data: [19037.32, 19515.58, 21684.86, 24682.80],
+      borderColor: "grey",
+      fill: false,
+      label: 'SC',
+   }, { 
+      data: [20969.29, 29647.48, 35500.71, 31818.08],
+      borderColor: "black",
+      fill: false,
+      label: 'SPALI',
+},{
+      data: [9376.76, 8355.70, 9448.90, 9240.39],
+      borderColor: "lightgreen",
+      fill: true,
+      label: 'QH',
+
+
+    }]
+  },
+  options: {
+    legend: {display: true}
+  }
+});
+</script>
